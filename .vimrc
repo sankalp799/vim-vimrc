@@ -36,6 +36,8 @@ set laststatus=2  " always display the status line
 
 call vundle#begin('~/.vim/plugged')
 
+Plugin 'alvan/vim-closetag'
+Plugin 'mattn/emmet-vim'
 Plugin 'https://github.com/ayu-theme/ayu-vim.git'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
@@ -110,4 +112,20 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"                NERDTree
+""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+
+
+" Start NERDTree and leave the cursor in it.
+autocmd VimEnter * NERDTree
+
+
+
 
